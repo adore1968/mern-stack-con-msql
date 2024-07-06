@@ -10,22 +10,22 @@ function TaskCard({ task }) {
 
   return (
     <div className="bg-zinc-700 text-white rounded-md p-5 flex flex-col gap-2.5">
-      <header className="flex justify-between items-center">
+      <header className="flex items-center justify-between">
         <h2 className="text-xl font-bold">{task.title}</h2>
         <span>{task.done ? "✅" : "❌"}</span>
       </header>
       <p className="text-lg">{task.description}</p>
-      {/* <span>{task.createdAt}</span> */}
+      <span className="text-lg">{task.createdAt}</span>
       <div className="flex flex-col gap-1 text-white">
         <button
           type="button"
-          className="bg-red-500 px-4 py-2 rounded"
+          className="px-4 py-2 bg-red-500 rounded"
           onClick={() => deleteTask(task.id)}
         >
           Delete
         </button>
         <Link
-          className="bg-green-500 px-4 py-2 rounded text-center"
+          className="px-4 py-2 text-center bg-green-500 rounded"
           to={`/edit/${task.id}`}
         >
           Edit

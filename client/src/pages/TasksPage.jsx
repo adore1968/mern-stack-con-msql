@@ -24,6 +24,7 @@ function TasksPage() {
           <h1>No tasks yet</h1>
         </div>
       );
+
     return (
       <div className="md:grid-cols-3 xl:grid-cols-4 grid grid-cols-2 gap-5">
         {tasks.map((task) => (
